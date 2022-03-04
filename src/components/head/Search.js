@@ -7,7 +7,7 @@ import { ReactComponent as SearchBtn } from 'assets/search.svg';
 const Search = () => {
   return (
     <SearchContainer>
-      <input />
+      <Input autoFocus placeholder="할 일 검색" />
       <SearchBtn />
     </SearchContainer>
   );
@@ -16,5 +16,22 @@ const Search = () => {
 export default Search;
 
 const SearchContainer = styled.div`
-  border: 1px solid red;
+  width: 50%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0 34px;
+`;
+
+const Input = styled.input`
+  outline: none;
+  font-size: 21px;
+  &::placeholder {
+    color: #999999;
+    font-size: 18px;
+  }
 `;

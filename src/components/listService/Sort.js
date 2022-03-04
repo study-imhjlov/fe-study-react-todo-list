@@ -6,6 +6,7 @@ const Sort = () => {
   return (
     <SortContainer>
       <DropdownBody>
+        <span>완료일순</span>
         <DropdownBtn />
       </DropdownBody>
       <DropdownMenu />
@@ -16,11 +17,15 @@ const Sort = () => {
 export default Sort;
 
 const SortContainer = styled.div`
-  border: 1px solid red;
+  margin: 0 40px 0 30px;
 `;
 const DropdownBody = styled.div`
-  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 45px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
 `;
-const DropdownMenu = styled.div`
-  border: 1px solid red;
-`;
+const DropdownMenu = styled.div``;
