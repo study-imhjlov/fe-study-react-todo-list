@@ -3,10 +3,14 @@ import styledComponents from 'styled-components';
 import { ReactComponent as CheckboxEmpty } from 'assets/checkbox_empty.svg';
 import { ReactComponent as Checkbox } from 'assets/checkbox_filter.svg';
 
-const Filter = () => {
+const Filter = ({ handleFilterToggle, showTodo }) => {
   return (
     <FilterContainer>
-      {true ? <CheckboxEmpty /> : <Checkbox />}
+      {showTodo ? (
+        <Checkbox onClick={handleFilterToggle} />
+      ) : (
+        <CheckboxEmpty onClick={handleFilterToggle} />
+      )}
       <FilterSpan>완료된 할 일 포함</FilterSpan>
     </FilterContainer>
   );
@@ -15,8 +19,11 @@ const Filter = () => {
 export default Filter;
 
 const FilterContainer = styledComponents.div`
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 const FilterSpan = styledComponents.span`
-  border: 1px solid red;
+  font-size : 18px;
+  margin-left : 18px;
 `;
