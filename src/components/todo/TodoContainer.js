@@ -12,6 +12,20 @@ const TodoContainer = ({ showTodo }) => {
     <TodoContainerBlock>
       <TodoCreate nextId={nextIdState} createTodo={createTodo} incrementNextId={incrementNextId} />
       <Count todos={todoState} />
+      <TodoList
+        status={TODO_STATUS.CREATED}
+        toggleTodo={toggleTodo}
+        removeTodo={removeTodo}
+        todos={todoState}
+      />
+      {showTodo && (
+        <TodoList
+          status={TODO_STATUS.COMPLETED}
+          toggleTodo={toggleTodo}
+          removeTodo={removeTodo}
+          todos={todoState}
+        />
+      )}
     </TodoContainerBlock>
   );
 };

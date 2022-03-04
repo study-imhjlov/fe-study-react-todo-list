@@ -1,0 +1,4 @@
+export const TODO_STATUS = {
+  CREATED: 'CREATED',
+  COMPLETED: 'COMPLETED',
+};
