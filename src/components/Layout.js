@@ -8,5 +8,9 @@ const Layout = (props) => {
 export default Layout;
 
 const LayoutBlock = styled.div`
-  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 92px;
 `;
